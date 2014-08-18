@@ -8,7 +8,7 @@
             ;; Automated testing
             [lein-cloverage "1.0.2"]
             [lein-test-out "0.3.1"]
-            [lein-midje "3.0.0"]
+            [lein-midje "3.1.3"]
 
             ;; Package management
             [lein-ancient "0.5.5"]
@@ -20,13 +20,13 @@
             [slothcfg "1.0.1"]
 
             ;; Documentation
-            [codox "0.6.8"]
+            [codox "0.8.10"]
             [lein-clojuredocs "1.0.2"]
 
             ;; Static analysis
-            [lein-typed "0.3.4"]
-            [jonase/eastwood "0.1.2"]
-            [lein-bikeshed "0.1.6"]
+            [lein-typed "0.3.5"]
+            [jonase/eastwood "0.1.4"]
+            [lein-bikeshed "0.1.7"]
             [lein-kibit "0.0.8"]
 
             ;; Templates
@@ -40,7 +40,7 @@
                  [org.clojure/tools.trace "0.7.8"]
 
                  [org.clojure/tools.namespace "0.2.4"]
-                 [im.chit/vinyasa "0.2.0"]
+                 [im.chit/vinyasa "0.2.2"]
 
                  [criterium "0.4.3"]]
 
