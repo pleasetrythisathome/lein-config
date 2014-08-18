@@ -33,6 +33,8 @@
             [immutable-stack/lein-template "0.1.0-SNAPSHOT"]
             [mies-om-weasel/lein-template "0.1.0-SNAPSHOT"]]
 
+  :plz ["/Users/HereNow/.lein/plz/mappings.edn"]
+
   :dependencies [[org.clojars.gjahad/debug-repl "0.3.3"]
                  [difform "1.1.2"]
 

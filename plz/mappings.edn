@@ -1,0 +1,32 @@
+{;; clojure
+ org.clojure/clojure         #{"clojure" "clj"}
+ org.clojure/clojurescript   #{"clojurescript" "cljs"}
+ org.clojure/core.async      #{"core.async" "async"}
+ org.clojure/core.cache      #{"core.cache" "cache"}
+ org.clojure/core.logic      #{"core.logic" "logic"}
+ org.clojure/core.match      #{"core.match" "match"}
+ org.clojure/core.memoize    #{"core.memoize" "memoize"}
+ org.clojure/core.typed      #{"core.typed" "typed"}
+ org.clojure/data.json       #{"data.json" "json"}
+ org.clojure/data.xml        #{"data.xml" "xml"}
+
+ ;; server
+ compojure                   #{"compojure"}
+ http-kit                    #{"http http-kit"}
+ hiccup                      #{"hiccup"}
+ ring                        #{"ring"}
+
+ ;; middleware
+ ring-devel                  #{"ring-dev"}
+ cider/cider-nrepl           #{"cider" "cider-nrepl"}
+
+ ;; dev
+ rewrite-clj #{"rewrite"}
+
+ om #{"om"}
+ sablono #{"sablono"}
+ ankha #{"ankha"}
+ shodan #{"shodan"}
+
+
+ }
