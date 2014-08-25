@@ -2,7 +2,7 @@
  {:plugins [[lein-datomic "0.2.0"]
 
             ;; REPL
-            [cider/cider-nrepl "0.7.0"]
+            [cider/cider-nrepl "0.8.0-SNAPSHOT"]
             [lein-pprint "1.1.1"]
 
             ;; Automated testing
@@ -15,9 +15,7 @@
             [lein-deps-tree "0.1.2"]
             [lein-localrepo "0.5.3"]
             [lein-plz "0.1.1"]
-
-            ;; Project management
-            [slothcfg "1.0.1"]
+            [lein-templater "0.1.1-SNAPSHOT"]
 
             ;; Documentation
             [codox "0.8.10"]
@@ -31,7 +29,8 @@
 
             ;; Templates
             [immutable-stack/lein-template "0.1.0-SNAPSHOT"]
-            [mies-om-weasel/lein-template "0.1.0-SNAPSHOT"]]
+            [mies-om-weasel/lein-template "0.1.0-SNAPSHOT"]
+            [satori/lein-template "0.1.0-SNAPSHOT"]]
 
   :plz ["/Users/HereNow/.lein/plz/mappings.edn"]
 
