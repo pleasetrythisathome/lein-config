@@ -40,21 +40,46 @@
                  [spyscope "0.1.4"]
                  [org.clojure/tools.trace "0.7.8"]
 
+                 [leiningen #=(leiningen.core.main/leiningen-version)]
+                 [im.chit/iroh "0.1.11"]
+                 [io.aviso/pretty "0.1.8"]
+
                  [org.clojure/tools.namespace "0.2.4"]
                  [im.chit/vinyasa "0.2.2"]
 
                  [criterium "0.4.3"]]
 
-  :injections [(require 'spyscope.core)
-               (require 'alex-and-georges.debug-repl)
+  :injections [(require 'alex-and-georges.debug-repl)
                (require 'com.georgejahad.difform)
-               (require '[vinyasa.inject :as inj])
-               (inj/inject 'clojure.core '>
-                           '[[clojure.repl apropos dir doc find-doc pst source]
-                             [clojure.tools.trace trace trace-forms trace-ns trace-vars
-                              untrace-ns untrace-vars]
-                             [clojure.test run-tests run-all-tests]
-                             [clojure.pprint pprint pp]
-                             [com.georgejahad.difform difform]
-                             [alex-and-georges.debug-repl debug-repl]
-                             [vinyasa.pull pull]])]}}
+               (require 'spyscope.core)
+               (require '[vinyasa.inject :as inject])
+               (require 'io.aviso.repl)
+               (inject/in ;; the default injected namespace is `.`
+
+                ;; note that `:refer, :all and :exclude can be used
+                [vinyasa.inject :refer [inject [in inject-in]]]
+                [vinyasa.lein :exclude [*project*]]
+
+                ;; imports all functions in vinyasa.pull
+                [vinyasa.pull :all]
+
+                ;; same as [cemerick.pomegranate
+                ;;           :refer [add-classpath get-classpath resources]]
+                [cemerick.pomegranate add-classpath get-classpath resources]
+
+                ;; inject into clojure.core
+                clojure.core
+                [iroh.core .> .? .* .% .%>]
+
+                ;; inject into clojure.core with prefix
+                clojure.core >
+                [clojure.pprint pprint pp]
+                [clojure.java.shell sh]
+
+                clojure.core >
+                [clojure.repl apropos dir doc find-doc pst source]
+                [clojure.tools.trace trace trace-forms trace-ns trace-vars
+                 untrace-ns untrace-vars]
+                [clojure.test run-tests run-all-tests]
+                [com.georgejahad.difform difform]
+                [alex-and-georges.debug-repl debug-repl])]}}
