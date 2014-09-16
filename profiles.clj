@@ -34,7 +34,8 @@
 
   :plz ["/Users/HereNow/.lein/plz/mappings.edn"]
 
-  :dependencies [[org.clojars.gjahad/debug-repl "0.3.3"]
+  :dependencies [[aprint "0.1.0"]
+                 [org.clojars.gjahad/debug-repl "0.3.3"]
                  [difform "1.1.2"]
 
                  [spyscope "0.1.4"]
@@ -46,6 +47,8 @@
 
                  [org.clojure/tools.namespace "0.2.4"]
                  [im.chit/vinyasa "0.2.2"]
+
+                 [com.jakemccrary/lein-test-refresh "0.5.1"]
 
                  [criterium "0.4.3"]]
 
